@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 100vw;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+            gap: 50px;
+            background-color: bisque;
+
+        }
+        .box{
+            width: 155px;
+            height: 155px;
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            animation: ani 2s linear 2s infinite, ani-2 5s linear 2s alternate;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        }
+        @keyframes ani {
+       
+                0%{
+                    transform: rotate(0deg);
+
+                }
+                20%{
+                    transform: rotate(45deg);
+                }
+                50%{
+                    transform: rotate(90deg);
+                }
+                70%{
+                    transform: rotate(180deg);
+                }
+                80%{
+                    transform: rotate(250deg);
+                }
+                100%{
+                    transform: rotate(360deg);
+                }
+
+          
+            
+        }
+        @keyframes ani-2 {
+            from{
+                left: 0%;
+            }
+            to{
+                left: 50vw;
+            }
+            
+        }
+    
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">hey there</div>
+        <div class="box">hey there </div>
+        <div class="box">hey there</div>
+    </div>
+</body>
+</html>
